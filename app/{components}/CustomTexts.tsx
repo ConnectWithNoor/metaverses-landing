@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { textContainer, textVariant2 } from '../{utils}/motion';
 
 type Props = {
-  title: string;
+  title: string | React.ReactElement;
   className: string;
 };
 
@@ -13,9 +13,9 @@ export const TypingText = ({ title, className }: Props) => (
     variants={textContainer}
     initial='hidden'
     whileInView='show'
-    className='font-normal text-[14px] text-secondary-white'
+    className={`${className} font-normal text-[14px] text-secondary-white`}
   >
-    {Array.from(title).map((letter, index) => (
+    {Array.from(title as string).map((letter, index) => (
       <motion.span
         key={letter + index}
         variants={textVariant2}
@@ -28,4 +28,13 @@ export const TypingText = ({ title, className }: Props) => (
   </motion.p>
 );
 
-export const TitleText = ({ title, className }: Props) => <h2>Title Text</h2>;
+export const TitleText = ({ title, className }: Props) => (
+  <motion.h2
+    variants={textVariant2}
+    initial='hidden'
+    whileInView='show'
+    className={`mt-[8px] font-bold md-text-[64px] text-[40px] text-white ${className}`}
+  >
+    {title}
+  </motion.h2>
+);
