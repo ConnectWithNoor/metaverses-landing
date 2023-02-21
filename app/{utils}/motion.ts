@@ -21,8 +21,8 @@ export const navVariants = {
 };
 
 export const slideIn = (
-  direction: string,
-  type: string,
+  direction: 'left' | 'right' | 'up' | 'down',
+  type: 'tween' | 'spring',
   delay: number,
   duration: number
 ) => ({
@@ -95,10 +95,10 @@ export const textVariant2 = {
 };
 
 export const fadeIn = (
-  direction: string,
-  type: string,
-  delay: string,
-  duration: string
+  direction: 'left' | 'right' | 'up' | 'down',
+  type: 'tween' | 'spring',
+  delay: number,
+  duration: number
 ) => ({
   hidden: {
     x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,

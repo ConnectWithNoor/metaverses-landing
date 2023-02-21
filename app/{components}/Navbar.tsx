@@ -18,7 +18,7 @@ const Navbar = () => (
       className={`${styles.innerWidth} mx-auto flex justify-between gap-8 2xl:`}
     >
       {/* search icon */}
-      <div className='relative w-[24px] h-[24px]'>
+      <div className='relative w-[24px] h-[24px] cursor-pointer'>
         <Image src='/search.svg' alt='search' fill className='object-contain' />
       </div>
 
@@ -29,7 +29,7 @@ const Navbar = () => (
       </h2>
 
       {/* hambudger menu icon */}
-      <div className='w-[24px] h-[24px] relative'>
+      <div className='w-[24px] h-[24px] relative cursor-pointer'>
         <Image src='/menu.svg' alt='menu' fill className='object-contain' />
       </div>
     </div>

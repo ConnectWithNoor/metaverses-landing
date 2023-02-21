@@ -11,6 +11,7 @@ const Hero = () => (
       variants={textContainer}
       initial='hidden'
       whileInView='show'
+      viewport={{ once: false }}
       className={`${styles.innerWidth} mx-auto flex flex-col`}
     >
       {/* title */}
