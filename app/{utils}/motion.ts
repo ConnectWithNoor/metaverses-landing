@@ -6,6 +6,7 @@ export const navVariants = {
       type: 'spring',
       stiffness: 300,
       damping: 140,
+      once: true,
     },
   },
   show: {
@@ -22,8 +23,8 @@ export const navVariants = {
 export const slideIn = (
   direction: string,
   type: string,
-  delay: string,
-  duration: string
+  delay: number,
+  duration: number
 ) => ({
   hidden: {
     x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
@@ -41,10 +42,7 @@ export const slideIn = (
   },
 });
 
-export const staggerContainer = (
-  staggerChildren: string,
-  delayChildren: string
-) => ({
+export const staggerContainer = (staggerChildren: any, delayChildren: any) => ({
   hidden: {},
   show: {
     transition: {
@@ -54,7 +52,7 @@ export const staggerContainer = (
   },
 });
 
-export const textVariant = (delay: string) => ({
+export const textVariant = (delay: number) => ({
   hidden: {
     y: 50,
     opacity: 0,
@@ -64,7 +62,8 @@ export const textVariant = (delay: string) => ({
     opacity: 1,
     transition: {
       type: 'spring',
-      duration: 1.25,
+      stiffness: 50,
+      damping: 5,
       delay,
     },
   },
