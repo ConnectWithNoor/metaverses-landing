@@ -9,7 +9,6 @@ import { fadeIn, planetVariants } from '../{utils}/motion';
 const WhatsNew = () => (
   <section className={`${styles.paddings} relative z-10`}>
     <motion.div
-      viewport={{ once: false }}
       className={`${styles.innerWidth} mx-auto flex flex-col lg:flex-row gap-8`}
     >
       {/* left */}
