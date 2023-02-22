@@ -15,8 +15,10 @@ const About = () => (
       viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} ${styles.flexCenter} mx-auto flex-col`}
     >
+      {/* text */}
       <TypingText title='| About Metaverse' className='text-center' />
 
+      {/* main paragraph */}
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
         initial='hidden'
@@ -38,6 +40,8 @@ const About = () => (
         <span className='font-extrabold text-white'> explore</span> devices you
         can the madness of the metaverse by scrolling down
       </motion.p>
+
+      {/* arrow down image */}
 
       <motion.img
         variants={fadeIn('up', 'tween', 0.4, 1)}
