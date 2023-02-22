@@ -1,11 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { InsightCard, TitleText, TypingText } from '../{components}';
 import { insights } from '../{constants}';
 import styles from '../{styles}';
-import { fadeIn } from '../{utils}/motion';
 
 const Insights = () => (
   <section className={`${styles.paddings} relative z-10`}>
