@@ -24,6 +24,8 @@ const World = () => (
 
       <motion.div
         variants={fadeIn('up', 'tween', 0.3, 1)}
+        initial='hidden'
+        whileInView='show'
         className='relative mt-[68px] flex w-full h-[550px]'
       >
         {/* bg world map picture */}

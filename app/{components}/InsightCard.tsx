@@ -12,7 +12,9 @@ type Props = {
 
 const InsightCard = ({ imgUrl, subtitle, title, index }: Props) => (
   <motion.div
-    variants={fadeIn('up', 'spring', index + 0.5, 1)}
+    variants={fadeIn('up', 'spring', index * 0.5, 1)}
+    initial='hidden'
+    whileInView='show'
     className={'flex md:flex-row flex-col gap-4'}
   >
     {/* image */}

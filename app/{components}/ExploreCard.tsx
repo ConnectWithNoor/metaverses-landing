@@ -25,7 +25,7 @@ const ExploreCard = ({
 }: Props) => (
   <motion.div
     // image card container (style if active ? expand : shrink)
-    variants={fadeIn('right', 'spring', index + 0.5, 0.75)}
+    variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
     initial='hidden'
     whileInView='show'
     className={`relative ${
